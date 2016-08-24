@@ -1,0 +1,85 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutRoot.cshtml";
+}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                @Html.Partial("_LeftSideBar")
+            </div>
+            <div class="col-sm-9">
+                <div class="blog-post-area">
+                    <h2 class="title text-center">Chi Tiết Công Dụng</h2>
+                    <div class="single-blog-post">
+                        <h3>Bơ 1</h3>
+                        <div class="post-meta">
+                            <ul>
+                                <li><i class="fa fa-clock-o"></i> 1:33 pm</li>
+                                <li><i class="fa fa-calendar"></i> DEC 5, 2013</li>
+                            </ul>
+                            <span>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </span>
+                        </div>
+                        <a href="">
+                            <img src="~/Content/Images/feature/blog_one.jpg" alt="">
+                        </a>
+                        <p>
+                            Morbi eu ultricies mauris. Integer lobortis quam dolor. Suspendisse iaculis justo ac semper molestie. Nullam ut tellus elementum, volutpat massa ac, ultrices purus. Nam nisi odio, placerat quis maximus eu, posuere nec quam. Praesent facilisis metus quis est maximus, ac euismod quam tempor. Vivamus arcu purus, pharetra at pulvinar in, ultricies at lacus. Phasellus at odio gravida, porta dui ut, rutrum enim. Sed dolor lacus, dictum non elit nec, varius molestie eros. Duis tempor at nisi vulputate condimentum.
+                        </p> <br>
+                        <p>
+                            Duis iaculis pellentesque elit et fringilla. Vivamus enim libero, volutpat ac ornare sit amet, molestie in massa. Integer sit amet gravida nisl. Aliquam vitae felis est. Nunc sed felis ultrices, blandit massa nec, mollis libero. Praesent a sem eleifend, ultricies felis et, aliquam arcu. Nullam ultricies commodo mi, quis posuere odio rhoncus at.
+                        </p> <br>
+                        <p>
+                            Praesent mattis metus mauris, ac ornare dolor ornare ac. Donec suscipit, purus a volutpat posuere, mi sapien malesuada ipsum, sit amet porttitor urna orci at tellus. Suspendisse non metus a diam finibus gravida. Vivamus a aliquet metus. Sed et efficitur odio, nec mattis lacus. Sed dapibus tristique feugiat. Sed maximus ipsum sed mi aliquam sagittis. Mauris sed eros id felis consectetur semper sit amet quis est. Etiam vitae nisi molestie, varius nibh eget, pretium nisi. Donec vel auctor metus. Vivamus ultrices maximus hendrerit. Nunc ac ante dapibus, auctor sem blandit, lobortis eros. Vivamus aliquam accumsan sem ut vestibulum.
+                        </p> <br>
+                        <p>
+                            Donec pretium sed nisl in interdum. Nulla pharetra auctor lacus nec porttitor. Nunc malesuada erat nec odio gravida, quis tincidunt tortor gravida. Integer tristique ipsum nec nulla vulputate, ac eleifend ex eleifend. Maecenas posuere tempor luctus. Vestibulum vel viverra lacus, a pulvinar nunc. Integer molestie sed nunc non vestibulum. Aliquam pharetra, justo at fringilla tempus, elit diam aliquam ligula, eu ultricies metus diam nec orci. Nulla facilisi. Phasellus accumsan congue nulla, eu dictum metus bibendum eget. Sed in egestas lectus. Donec sit amet tellus vel lectus vulputate vehicula. Aenean interdum diam at tristique imperdiet. In ultrices luctus volutpat. Curabitur id eleifend nulla, ut tincidunt neque.
+                        </p>
+                    </div>
+                </div><!--/blog-post-area-->
+                <div class="rating-area">
+                    <ul class="ratings">
+                        <li class="rate-this">Bình chọn:</li>
+                        <li>
+                            <i class="fa fa-star color"></i>
+                            <i class="fa fa-star color"></i>
+                            <i class="fa fa-star color"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </li>
+                        <li class="color">(6 lượt)</li>
+                    </ul>
+                    <ul class="tag">
+                        <li>TAG:</li>
+                        <li><a class="color" href="">Pink <span>/</span></a></li>
+                        <li><a class="color" href="">T-Shirt <span>/</span></a></li>
+                        <li><a class="color" href="">Girls</a></li>
+                    </ul>
+                </div><!--/rating-area-->
+                <div class="response-area">
+                    <div class="fb-comments" data-href="" 
+                         data-width="100%"
+                         data-numposts="2">
+                    </div>                   
+                </div><!--/Response-area-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

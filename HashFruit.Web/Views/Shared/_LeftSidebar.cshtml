@@ -1,0 +1,75 @@
+﻿
+<div class="left-sidebar">
+    <h2>Danh mục</h2>
+    <div class="panel-group category-products" id="accordian">
+        <!--category-productsr-->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                        Trái cây
+                    </a>
+                </h4>
+            </div>
+            <div id="sportswear" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">Bơ </a></li>
+                        <li><a href="#">Bưởi </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a href="#">Dụng cụ</a></h4>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a href="#">Đất trồng</a></h4>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a href="#">Hạt giống</a></h4>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a href="#">Phân bón</a></h4>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"><a href="#">Linh tinh</a></h4>
+            </div>
+        </div>
+    </div><!--/category-products-->
+
+    <div class="price-range">
+        <!--price-range-->
+        <h2>Khoảng giá</h2>
+        <div class="well text-center">
+            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2"><br />
+            <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
+        </div>
+    </div><!--/price-range-->
+
+    <div class="shipping text-center">
+        <!--shipping-->
+        <img src="~/Content/Images/home/shipping.jpg" alt="" />
+    </div><!--/shipping-->
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        /*price range*/
+      $('#sl2').slider();
+      var RGBChange = function () {
+          $('#RGB').css('background', 'rgb(' + r.getValue() + ',' + g.getValue() + ',' + b.getValue() + ')')
+      };
+  });
+</script>

@@ -1,0 +1,102 @@
+﻿@using HashFruit.Web.Helper
+
+<div class="header_top">
+    <!--header_top-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="contactinfo">
+                    <ul class="nav nav-pills">
+                        <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                        <li><a href="#"><i class="fa fa-play "></i> Google play</a></li>
+                        <li><a href="#"><i class="fa fa-apple"></i> App Store</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="social-icons pull-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/header_top-->
+
+<div class="header-middle">
+    <!--header-middle-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="logo pull-left">
+                    <a href="~/Home"><img src="~/Content/Images/logo.png" alt="logo"/></a>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="shop-menu pull-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#"><i class="fa fa-user"></i> Tài khoản</a></li>
+                        <li><a href="#"><i class="fa fa-star"></i> Ưa thích</a></li>
+                        <li><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                        <li><a href="~/Cart" class="@Html.IsRootActive("Cart")"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                        <li><a href="~/Account/Login" class="@Html.IsActive("Account", "Login")"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/header-middle-->
+
+<div class="header-bottom">
+    <!--header-bottom-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="mainmenu pull-left">
+                    <ul class="nav navbar-nav collapse navbar-collapse">
+                        <li><a href="~/Home" class="@Html.IsRootActive("Home")">Trang chủ</a></li>
+                        <li class="dropdown">
+                            <a href="#">Hàng mới<i class="fa fa-angle-down"></i></a>
+                            <ul role="menu" class="sub-menu">
+                                <li><a href="#">Hàng mới 1</a></li>
+                                <li><a href="#">Hàng mới 2</a></li>
+                                <li><a href="#">Hàng mới 3</a></li>
+                                <li><a href="#">Hàng mới 4</a></li>
+                                <li><a href="#">Hàng mới 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Mua nhiều</a></li>
+                        <li class="dropdown">
+                            <a href="#">Khuyến mãi<i class="fa fa-angle-down"></i></a>
+                            <ul role="menu" class="sub-menu">
+                                <li><a href="#">Khuyến mãi 1</a></li>
+                                <li><a href="#">Khuyến mãi 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="~/Feature" class="@Html.IsRootActive("Feature")">Công dụng</a></li>
+                        <li><a href="~/Contact" class="@Html.IsRootActive("Contact")">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="search_box pull-right">
+                    <input type="text" placeholder="Tìm kiếm" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/header-bottom-->

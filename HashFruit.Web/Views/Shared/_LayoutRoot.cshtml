@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/templateJS")
+        @Scripts.Render("~/bundles/angular")
+</head>
+<body>
+    <header id="header">
+        @Html.Partial("_Header")
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer id="footer">
+        @Html.Partial("_Footer")
+    </footer>
+    <script type="text/javascript">
+        $(window).load(function () { Pace.restart(); });
+    </script>
+</body>
+</html>

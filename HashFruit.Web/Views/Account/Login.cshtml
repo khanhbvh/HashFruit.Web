@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutRoot.cshtml";
+}
+
+<section>
+    <!--form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="login-form">
+                    <!--login form-->
+                    <h2>Đăng nhập bằng tài khoản</h2>
+                    <form action="#">
+                        <input type="text" placeholder="Tên đăng nhập" />
+                        <input type="password" placeholder="Mật khẩu" />
+                        <span>
+                            <input type="checkbox" class="checkbox">
+                            Nhớ tài khoản
+                        </span>
+                        <button type="submit" class="btn btn-default pull">Đăng nhập</button>
+                    </form>
+                </div><!--/login form-->
+
+                <div class="social-networks">
+                    <h5 class="pull-left"><a href="#">Quên mật khẩu?</a></h5>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <h2 class="or">HOẶC</h2>
+            </div>
+            <div class="col-sm-4">
+                <div class="signup-form">
+                    <!--sign up form-->
+                    <h2>Đăng Ký Mới!</h2>
+                    <form action="#">
+                        <input type="text" placeholder="Tên đăng nhập" />
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Mật khẩu" />
+                        <button type="submit" class="btn btn-default">Đăng ký</button>
+                    </form>
+                </div><!--/sign up form-->
+                <div class="social-networks">
+                    <h2 class="title text-center">Tài Khoản Khác</h2>
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/form-->
+

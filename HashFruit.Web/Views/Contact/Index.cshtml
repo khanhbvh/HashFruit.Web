@@ -1,0 +1,164 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutRoot.cshtml";
+}
+<link href='//fonts.googleapis.com/css?family=Convergence|Bitter|Droid+Sans|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+
+<div id="contact-page" class="container">
+    <div class="bg">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title text-center">Liên Hệ <strong>Chúng Tôi</strong></h2>
+                <div id="gmap" class="contact-map">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="contact-form">
+                    <h2 class="title text-center">Liên Hệ</h2>
+                    <div class="status alert alert-success" style="display: none"></div>
+                    <form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
+                        <div class="form-group col-md-6">
+                            <input id="name" type="text" name="name" class="form-control" required="required" placeholder="Tên">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="email" type="email" name="email" class="form-control" required="required" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="phone" type="text" name="phone" class="form-control" required="required" placeholder="Số Điện Thoại">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="title" type="text" name="title" class="form-control" required="required" placeholder="Tiêu Đề">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <textarea id="message" name="message" required="required" class="form-control" rows="8" placeholder="Nội dung cần gửi"></textarea>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="submit" name="submit" class="btn btn-primary pull-right" value="Gửi">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="contact-info">
+                    <h2 class="title text-center">Thông Tin Liên Lạc</h2>
+                    <address>
+                        <p>Fruit-Shop Inc.</p>
+                        <p>235 Kha Vạn Cân, Hiệp Bình Chánh, Thủ Đức</p>
+                        <p>TP.HCM VN</p>
+                        <p>Mobile: +84 90 854 687 | +84 90 854 688</p>
+                        <p>Fax: 1-714-252-0026</p>
+                        <p>Email: info@fruit-shop.com</p>
+                    </address>
+                    <div class="social-networks">
+                        <h2 class="title text-center">Mạng Xã Hội</h2>
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--/#contact-page-->
+<script>
+    $(document).ready(function () {
+        var msg = "";
+        var elements = document.getElementsByTagName("INPUT");
+
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].oninvalid = function (e) {
+                if (!e.target.validity.valid) {
+                    switch (e.target.id) {
+                        case 'name':
+                            e.target.setCustomValidity("Vui lòng nhập tên."); break;
+                        case 'email':
+                            e.target.setCustomValidity("Vui lòng nhập đúng địa chỉ mail."); break;
+                        case 'title':
+                            e.target.setCustomValidity("Vui lòng nhập tiêu đề."); break;
+                        case 'phone':
+                            e.target.setCustomValidity("Vui lòng nhập đúng số điện thoại."); break;
+                        default: e.target.setCustomValidity(""); break;
+                    }
+                }
+            };
+            elements[i].oninput = function (e) {
+                e.target.setCustomValidity(msg);
+            };
+        }
+
+        var elements = document.getElementsByTagName("textarea");
+
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].oninvalid = function (e) {
+                if (!e.target.validity.valid) {
+                    switch (e.target.id) {
+                        case 'message':
+                            e.target.setCustomValidity("Vui lòng nhập nội dung cần gửi."); break;
+                        default: e.target.setCustomValidity(""); break;
+                    }
+                }
+            };
+            elements[i].oninput = function (e) {
+                e.target.setCustomValidity(msg);
+            };
+        }
+    })
+    var map;
+    var marker;
+    function initMap() {
+        var contentString = '<div id="content">' +
+           '<div id="siteNotice">' +
+           '</div>' +
+           '<h1 id="firstHeading" class="firstHeading">Uluru</h1>' +
+           '<div id="bodyContent">' +
+           '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+           'sandstone rock formation in the southern part of the ' +
+           'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
+           'south west of the nearest large town, Alice Springs; 450&#160;km ' +
+           '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major ' +
+           'features of the Uluru - Kata Tjuta National Park. Uluru is ' +
+           'sacred to the Pitjantjatjara and Yankunytjatjara, the ' +
+           'Aboriginal people of the area. It has many springs, waterholes, ' +
+           'rock caves and ancient paintings. Uluru is listed as a World ' +
+           'Heritage Site.</p>' +
+           '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+           'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
+           '(last visited June 22, 2009).</p>' +
+           '</div>' +
+           '</div>';
+
+        var myLatLng = { lat: 10.828340, lng: 106.716455 };
+        map = new google.maps.Map(document.getElementById('gmap'), {
+            center: myLatLng,
+            zoom: 16
+        });
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'HashFruit!'
+        });
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwOPz6wC6Ctkn9PZm4HuuPc0cZg0es7ZM&callback=initMap"
+        async defer>
+</script>
